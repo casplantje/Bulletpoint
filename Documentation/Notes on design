@@ -1,0 +1,60 @@
+TODO: translate to UK English
+
+Bullets makkelijker
+tekst positionering
+comments bug
+video playback bug
+
+
+new syntax ideas:
+"regels" afsluiten met ;
+
+funtie voor het instellen van default settings:
+[default]
+
+slide aanduiden met
+->[slide], of shorthand ->
+
+met vervolgens mogelijke "functies" voor de achtergrond:
+colour(black)
+colour(#FFFFFF)
+image(image.jpg, processing options)
+movie(movie.ogv, begintime, endtime)
+raster(backgroundfunction) //raster over een achtergrond heen leggen
+
+overige "functies"
+font(name, size, bold/italic/normal)
+position(top/bottom)
+position(x,y) // in %
+
+
+mogelijke "functies" voor content:
+verschillende layouts
+
+layout functies:
+columns(number){}{}
+rows(number){}{}
+of
+columns(50%,50%){}{}
+
+voorbeeld:
+[default]
+raster(colour(white), black)
+font(courrier, 16, bold);
+->[slide]
+{
+	Standaard slide;
+}
+->[slide] movie(film.ogv)
+{
+	columns(40%,60%)
+	{
+		kolom 1;
+	}
+	{
+		kolom 2;
+	};
+}
+
+
+Dit allemaal implementeren met het decorator pattern
